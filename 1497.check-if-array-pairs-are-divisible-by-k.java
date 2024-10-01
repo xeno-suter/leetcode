@@ -10,9 +10,7 @@ class Solution {
         int[] remainderFreq = new int[k];
         
         for (int num : arr) {
-            int remainder = (num % k + k) % k;
-
-            remainderFreq[remainder]++;
+            remainderFreq[(num % k + k) % k]++;
         }
 
         if ((remainderFreq[0] & 1) != 0) {
